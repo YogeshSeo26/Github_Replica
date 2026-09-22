@@ -18,7 +18,7 @@ const Dashboard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3002/repo/user/${userId}`
+          `https://github-replica-backend.onrender.com/repo/user/${userId}`
         );
         const data = await response.json();
         setRepositories(data.repositories);
@@ -29,7 +29,7 @@ const Dashboard = () => {
 
     const fetchSuggestedRepositories = async () => {
       try {
-        const response = await fetch(`http://localhost:3002/repo/all`);
+        const response = await fetch(`https://github-replica-backend.onrender.com/repo/all`);
         const data = await response.json();
         // console.log(data);
         setSuggestedRepositories(data);
